@@ -70,6 +70,12 @@ const dragEnd = () => {
 const dropzones = document.querySelectorAll(".dropzone");
 
 // Add eventlisteners to each dropzone
+for (const dropzone of dropzones) {
+  dropzone.addEventListener("dragEnter", dragEnter);
+  dropzone.addEventListener("dragover", dragOver);
+  dropzone.addEventListener("dragleave", dragLeave);
+  dropzone.addEventListener("drop", dragDrop);
+}
 
 // Create a function dragEnter
 const dragEnter = (event) => {
@@ -100,9 +106,3 @@ const dragDrop = (event) => {
   event.target.append(task);
 };
 // Create a function dragDrop
-for (const dropzone of dropzones) {
-  dropzone.addEventListener("dragEnter", dragEnter);
-  dropzone.addEventListener("dragover", dragOver);
-  dropzone.addEventListener("dragleave", dragLeave);
-  dropzone.addEventListener("drop", dragDrop);
-}

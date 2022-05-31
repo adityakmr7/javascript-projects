@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.todo_containerBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    margin: 100px auto;
+}
+.input_container {
+    margin: 40px 100px;
+}
+input {
+    padding: 10px;
+}
+button {
+    padding: 10px;
+}
+
+.backlog_container{
+    background-color: cyan;
+    height: 60vh;
+    width: 400px;
+    display: flex;
+   flex-direction: column;
+}
+.todo_container{
+    background-color: red;
+    height: 60vh;
+    width: 400px;
+}
+
+.todo_list {
+    padding: 10px 10px;
+    border: 1px solid #000000;
+    list-style: none;
+}

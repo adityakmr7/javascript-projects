@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Drag and Drop Application</h1>
+        <div class="input_container">
+            <input placeholder="Enter Todo..." class="create_todo_input"/>
+            <button class="create_todo_btn">Create TODO</button>
+        </div>
+        <div class="todo_containerBox">
+            <div class="backlog_container">
+                <h1>Backlog</h1>
+                <div>
+
+               
+                <ul class="list_container">
+                   
+                </ul>
+            </div>
+            </div>
+            <div ondrop="handleDrop(event)"
+            ondragover="handleDragOver(event)" class="todo_container">
+                <h1>TODO</h1>
+                
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
