@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            flex-direction: row;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .title {
+            text-align: center;
+            font-size: 60px;
+            color: cadetblue;
+            font-weight: bold;
+        }
+        #count {
+            text-align: center;
+            font-size: 50px;
+            color: green;
+            font-weight: bold;
+        }
+        .btn_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+        button {
+            border-color: #1b2437;
+            border-radius: 5px;
+            border-style: solid;
+            border-width: 1px;
+            padding: 10px 20px ;
+            margin: 20px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <h1 class="title">Counter</h1>
+    <h2 id="count">0</h2>
+    <div class="btn_container">
+    <button id="increment">Increment</button>
+    <button id="reset">Reset</button>
+    <button id="decrement">Decrement</button>
+    </div>
+</div>
+<script src="./script.js"></script>
+</body>
+</html>
