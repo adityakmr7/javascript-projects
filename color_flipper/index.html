@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    #container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+    }
+    .content {
+        flex-direction: row;
+        align-items: center;
+        background-color: black;
+        padding: 8px 8px;
+        color: white;
+        display: flex;
+        border-radius: 4px;
+
+    }
+    .content p {
+        font-weight: bold;
+        font-size: 60px;
+        color: white;
+    }
+    .content h2 {
+        font-size: 60px;
+        color: white;
+        margin-left: 8px;
+    }
+    .btn_container {
+        margin-top: 16px;
+    }
+    #btn_color_change {
+        padding: 8px 16px;
+        border-radius: 4px;
+        background-color: #f1f5f8;
+        font-size: 24px;
+        cursor: pointer;
+        border-color: #4786ff;
+        border-width: 2px;
+        border-style: solid;
+
+    }
+</style>
+<body>
+<main id="container">
+    <div class="content">
+        <p>Background color : </p>
+        <h2 id="color_value">-</h2>
+    </div>
+    <div class="btn_container">
+        <button id="btn_color_change">
+            Click me
+        </button>
+    </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
