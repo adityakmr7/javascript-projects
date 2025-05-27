@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hex to RGB Converter</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <span class="icon">🎨</span>
+                <h1>Hex to RGB Converter</h1>
+            </div>
+            <p>Convert hexadecimal color codes to RGB values</p>
+        </header>
+
+        <!-- Main Converter -->
+        <div class="card main-card">
+            <h2>Color Converter</h2>
+
+            <!-- Input Section -->
+            <div class="input-section">
+                <label for="hex-input">Hex Color Code</label>
+                <input type="text" id="hex-input" placeholder="#3b82f6 or 3b82f6" value="#3b82f6">
+                <div id="error-message" class="error-message hidden">
+                    Please enter a valid hex color (e.g., #3b82f6 or 3b82f6)
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div id="results-section" class="results-section">
+                <!-- Color Preview -->
+                <div class="preview-section">
+                    <label>Color Preview</label>
+                    <div id="color-preview" class="color-preview"></div>
+                    <div id="hex-display" class="hex-display">#3b82f6</div>
+                </div>
+
+                <!-- RGB Values -->
+                <div class="rgb-section">
+                    <label>RGB Values</label>
+                    <div class="rgb-components">
+                        <div class="rgb-component red">
+                            <div class="component-label">Red</div>
+                            <div id="red-value" class="component-value">59</div>
+                        </div>
+                        <div class="rgb-component green">
+                            <div class="component-label">Green</div>
+                            <div id="green-value" class="component-value">130</div>
+                        </div>
+                        <div class="rgb-component blue">
+                            <div class="component-label">Blue</div>
+                            <div id="blue-value" class="component-value">246</div>
+                        </div>
+                    </div>
+
+                    <div class="rgb-output">
+                        <span id="rgb-string">rgb(59, 130, 246)</span>
+                        <button id="copy-btn" class="copy-btn" title="Copy RGB value">📋</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Example Colors -->
+        <div class="card">
+            <h2>Try These Examples</h2>
+            <div class="examples-grid" id="examples-grid">
+                <!-- Examples will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- How It Works -->
+        <div class="card">
+            <h2>How the Conversion Works</h2>
+            <div class="how-it-works">
+                <div class="steps-section">
+                    <h3>Step-by-Step Process:</h3>
+                    <ol class="steps-list">
+                        <li><span class="step-number">1</span>Remove the '#' symbol if present</li>
+                        <li><span class="step-number">2</span>Convert 3-digit shorthand to 6-digit format</li>
+                        <li><span class="step-number">3</span>Parse the hex string as a base-16 number</li>
+                        <li><span class="step-number">4</span>Extract RGB values using bitwise operations</li>
+                    </ol>
+                </div>
+                <div class="bitwise-section">
+                    <h3>Bitwise Operations:</h3>
+                    <div class="code-block">
+                        <div>Red: (value >> 16) & 255</div>
+                        <div>Green: (value >> 8) & 255</div>
+                        <div>Blue: value & 255</div>
+                    </div>
+                    <p>Each color channel is extracted by shifting bits and masking with 255 (0xFF).</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toast for copy feedback -->
+        <div id="toast" class="toast hidden">RGB value copied to clipboard!</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
